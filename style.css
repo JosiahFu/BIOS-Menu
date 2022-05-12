@@ -1,0 +1,74 @@
+/* Perfect DOS VGA 437 font by Zeh Fernando, free to use */
+/* https://www.dafont.com/perfect-dos-vga-437.font */
+@font-face {
+    font-family: dos-font;
+    src: url("Perfect DOS VGA 437.ttf");
+}
+
+:root {
+    --background: #a9a9a9;
+    --foreground: #464646;
+    --header-foreground: black;
+    --accent: #0300a9;
+    --active: white;
+}
+
+body{
+    background-color: var(--background);
+/*     cursor: none; */
+    font-family: dos-font, monospace;
+    font-size: 32px;
+    color: var(--foreground);
+    margin: 0;
+}
+
+p {
+    margin: 0;
+    select: none;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Old versions of Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+}
+
+h1, h2, h3 {
+    font-size: inherit;
+    margin: inherit;
+    font-weight: inherit;
+}
+
+h1 {
+    color: var(--active);
+    text-align: center;
+}
+
+.header {
+    background-color: var(--accent);
+}
+
+h2 {
+    color: var(--background);
+    display: inline-block;
+    margin-left: 1em;
+    margin-right: 1em;
+    display: inline;
+}
+
+.active {
+    color: var(--active);
+}
+
+h2.selected {
+    background-color: var(--background);
+    color: var(--accent);
+}
+
+h2.selected.active {
+    color: var(--active);
+}
+
+h3 {
+    color: var(--header-foreground);
+}
