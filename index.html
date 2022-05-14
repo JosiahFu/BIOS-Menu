@@ -7,21 +7,34 @@
         <link rel="stylesheet" type="text/css" href="style.css">
     </head>
     <body>
-        <div class="header">
-            <h1>BIOS SETUP UTILITY</h1>
-            <div id="header-list" class="item-list horizontal">
-                <h2 class="selected active">Main</h2>
-                <h2>Advanced</h2>
-                <h2>PCI</h2>
-                <h2>Boot</h2>
-                <h2>Security</h2>
-                <h2>Chipset</h2>
-                <h2>Exit</h2>
+        <div id="everything" class="flex-container vertical">
+            <div id="header">
+                <h1>BIOS SETUP UTILITY</h1>
+                <div id="header-list" class="item-list horizontal">
+                    <div class="tab selected active">Main</div>
+                    <div class="tab">Advanced</div>
+                    <div class="tab">PCI</div>
+                    <div class="tab">Boot</div>
+                    <div class="tab">Security</div>
+                    <div class="tab">Chipset</div>
+                    <div class="tab">Exit</div>
+                </div>
             </div>
-        </div>
-        <div id="pages">
-            <div class="page" id="Main">
-                <h3>Hola</h3>
+            <div id="screen" class="flex-container horizontal">
+                <div id="pages">
+                    <div class="page" id="Main">
+                        <h2>Main</h2>
+                        
+                        <h3>System Time:</h3>
+                        <span>[0:30:0]</span>
+                    </div>
+                </div>
+                <div id="help-pane">
+                    
+                </div>
+            </div>
+            <div id="footer">
+                Hello
             </div>
         </div>
         <script src="script.js"></script>

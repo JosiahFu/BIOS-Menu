@@ -7,8 +7,8 @@
 
 :root {
     --background: #a9a9a9;
-    --foreground: #464646;
-    --header-foreground: black;
+    --foreground: #000000;
+    --header-foreground: var(--accent);
     --accent: #0300a9;
     --active: white;
 }
@@ -44,31 +44,78 @@ h1 {
     text-align: center;
 }
 
-.header {
-    background-color: var(--accent);
+h2 {
+    display: none;
 }
 
-h2 {
-    color: var(--background);
-    display: inline-block;
-    margin-left: 1em;
-    margin-right: 1em;
+h3 {
+    color: var(--header-foreground);
     display: inline;
+}
+
+.flex-container {
+    display: flex;
+}
+
+.flex-container.horizontal {
+    flex-direction: row;
+}
+
+.flex-container.vertical {
+    flex-direction: column;
+}
+
+#everything {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#header, #footer {
+    background-color: var(--accent);
+    overflow-x: hidden;
+    white-space: nowrap;
+}
+
+#screen {
+    margin: 16px 4px;
+    flex-grow: 1;
+}
+
+#pages, #help-pane {
+    border: solid 4px var(--foreground);
+    padding: 16px;
+    box-sizing: border-box;
+}
+
+#pages {
+    flex-grow: 1;
+}
+    
+#help-pane {
+    width: 200px;
+    border-left: none;
 }
 
 .active {
     color: var(--active);
 }
 
-h2.selected {
+.tab {
+    color: var(--background);
+    display: inline-block;
+    margin-inline-start: 1em;
+    margin-inline-end: 1em;
+    display: inline;
+}
+
+.tab.selected {
     background-color: var(--background);
     color: var(--accent);
 }
 
-h2.selected.active {
+.tab.selected.active {
     color: var(--active);
-}
-
-h3 {
-    color: var(--header-foreground);
 }
